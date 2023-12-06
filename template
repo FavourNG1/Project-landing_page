@@ -1,0 +1,19 @@
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+# Define routes
+@app.route('/')
+def index():
+    return render_template('index.html')  # Render your landing page HTML
+
+@app.route('/jobs')
+def jobs():
+    # Logic to fetch job listings from a database or external API
+    # Return a page displaying job listings
+    return "This is the jobs page. Job listings will be displayed here."
+
+# Add more routes as needed
+
+if __name__ == '__main__':
+    app.run(debug=True)  # Run the Flask app in debug mode
